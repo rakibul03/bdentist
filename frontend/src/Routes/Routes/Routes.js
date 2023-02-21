@@ -51,7 +51,7 @@ const router = createBrowserRouter([
         path: "/dashboard/allusers",
         element: (
           <AdminRoute>
-            <AllUsers></AllUsers>
+            <AllUsers />
           </AdminRoute>
         ),
       },
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
         path: "/dashboard/adddoctor",
         element: (
           <AdminRoute>
-            <AddDoctor></AddDoctor>
+            <AddDoctor />
           </AdminRoute>
         ),
       },
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
         path: "/dashboard/managedoctors",
         element: (
           <AdminRoute>
-            <ManageDoctors></ManageDoctors>
+            <ManageDoctors />
           </AdminRoute>
         ),
       },
