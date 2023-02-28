@@ -47,7 +47,7 @@ const ManageDoctors = () => {
   };
 
   if (isLoading) {
-    return <Loading></Loading>;
+    return <Loading />;
   }
 
   return (
