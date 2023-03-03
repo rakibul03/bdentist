@@ -9,7 +9,7 @@ const DashboardLayout = () => {
   const [isAdmin] = useAdmin(user?.email);
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="drawer drawer-mobile">
         <input
           id="dashboard-drawer"
