@@ -24,7 +24,7 @@ const AvailableAppointments = ({ selectedDate }) => {
   });
 
   if (isLoading) {
-    return <Loading></Loading>;
+    return <Loading />;
   }
 
   return (
@@ -38,7 +38,7 @@ const AvailableAppointments = ({ selectedDate }) => {
             key={option._id}
             appointmentOption={option}
             setTreatment={setTreatment}
-          ></AppointmentOption>
+          />
         ))}
       </div>
       {treatment && (
@@ -47,7 +47,7 @@ const AvailableAppointments = ({ selectedDate }) => {
           treatment={treatment}
           setTreatment={setTreatment}
           refetch={refetch}
-        ></BookingModal>
+        />
       )}
     </section>
   );
