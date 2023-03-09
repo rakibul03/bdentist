@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   const menuItems = (
-    <React.Fragment>
+    <>
       <li>
         <Link to="/">Home</Link>
       </li>
@@ -36,7 +36,7 @@ const Navbar = () => {
           <Link to="/login">Login</Link>
         </li>
       )}
-    </React.Fragment>
+    </>
   );
 
   return (
