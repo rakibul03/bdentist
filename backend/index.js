@@ -72,7 +72,7 @@ async function run() {
         .find(bookingQuery)
         .toArray();
 
-      // code carefully :D
+      
       options.forEach((option) => {
         const optionBooked = alreadyBooked.filter(
           (book) => book.treatment === option.name
