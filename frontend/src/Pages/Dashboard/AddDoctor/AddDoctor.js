@@ -45,7 +45,7 @@ const AddDoctor = () => {
             image: imgData.data.url,
           };
 
-          // save doctor information to the databases
+          // save doctor information to the db
           fetch("http://localhost:5000/doctors", {
             method: "POST",
             headers: {
