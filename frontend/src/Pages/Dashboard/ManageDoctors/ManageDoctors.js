@@ -52,9 +52,7 @@ const ManageDoctors = () => {
 
   return (
     <div>
-      <h2 className="text-3xl">
-        Manage All Of Register Doctors: {doctors?.length}
-      </h2>
+      <h2 className="text-3xl">Register Doctors: {doctors?.length}</h2>
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
