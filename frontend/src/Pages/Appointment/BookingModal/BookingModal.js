@@ -20,7 +20,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
     const booking = {
       appointmentDate: date,
       treatment: treatmentName,
-      patient: name,
+      patient: name,  
       slot,
       email,
       phone,
