@@ -50,7 +50,7 @@ async function run() {
 
     // NOTE: make sure you use verifyAdmin after verifyJWT
     const verifyAdmin = async (req, res, next) => {
-      const decodedEmail = req.decoded.email;
+      const decodedEmail = req.decoded?.email;
       const query = { email: decodedEmail };
       const user = await usersCollection.findOne(query);
 
