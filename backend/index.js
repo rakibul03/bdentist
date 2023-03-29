@@ -202,7 +202,7 @@ async function run() {
 run().catch(console.log);
 
 app.get("/", async (req, res) => {
-  res.send("Bdentist server is running");
+  res.send("Server is up and running.");
 });
 
 app.listen(port, () => console.log(`Bdentist running on ${port}`));
