@@ -78,7 +78,7 @@ async function run() {
           (book) => book.treatment === option.name
         );
         const bookedSlots = optionBooked.map((book) => book.slot);
-        const remainingSlots = option.slots.filter(
+        const remainingSlots = option?.slots.filter(
           (slot) => !bookedSlots.includes(slot)
         );
         option.slots = remainingSlots;
