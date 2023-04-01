@@ -86,9 +86,9 @@ async function run() {
     });
 
     app.get("/appointmentSpecialty", async (req, res) => {
-      const query = {};
+      // const query = {};
       const result = await appointmentOptionCollection
-        .find(query)
+        .find({})
         .project({ name: 1 })
         .toArray();
       res.send(result);
