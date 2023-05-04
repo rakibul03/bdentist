@@ -5,7 +5,7 @@ import { AuthContext } from "../../../contexts/AuthProvider";
 
 const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
   // treatment is just another name of appointmentOptions with name, slots, _id
-  const { name: treatmentName, slots, price } = treatment;
+  const { name: treatmentName, slots } = treatment;
   const date = format(selectedDate, "PP");
   const { user } = useContext(AuthContext);
 
@@ -24,11 +24,9 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
       slot,
       email,
       phone,
-      price,
     };
 
-    // TODO: send data to the server
-    fetch("http://localhost:5000/bookings", {
+    fetch("https://bdentist.vercel.app/bookings", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -37,7 +35,6 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.acknowledged) {
           setTreatment(null);
           toast.success("Booking confirmed");
