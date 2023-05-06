@@ -16,7 +16,7 @@ const AvailableAppointments = ({ selectedDate }) => {
     queryKey: ["appointmentOptions", date],
     queryFn: async () => {
       const res = await fetch(
-        `https://bdentist.vercel.app/v2/appointmentOptions?date=${date}`
+        `https://doctor-portal-delta.vercel.app/v2/appointmentOptions?date=${date}`
       );
       const data = await res.json();
       return data;
@@ -24,7 +24,7 @@ const AvailableAppointments = ({ selectedDate }) => {
   });
 
   if (isLoading) {
-    return <Loading />;
+    return <Loading></Loading>;
   }
 
   return (
@@ -38,7 +38,7 @@ const AvailableAppointments = ({ selectedDate }) => {
             key={option._id}
             appointmentOption={option}
             setTreatment={setTreatment}
-          />
+          ></AppointmentOption>
         ))}
       </div>
       {treatment && (
@@ -47,7 +47,7 @@ const AvailableAppointments = ({ selectedDate }) => {
           treatment={treatment}
           setTreatment={setTreatment}
           refetch={refetch}
-        />
+        ></BookingModal>
       )}
     </section>
   );
