@@ -42,6 +42,7 @@ const AddDoctor = () => {
           const doctor = {
             name: data.name,
             email: data.email,
+            role: "doctor",
             specialty: data.specialty,
             image: imgData.data.url,
           };
