@@ -4,7 +4,6 @@ import toast from "react-hot-toast";
 import { AuthContext } from "../../../contexts/AuthProvider";
 
 const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
-  // treatment is just another name of appointmentOptions with name, slots, _id
   const { name: treatmentName, slots } = treatment;
   const date = format(selectedDate, "PP");
   const { user } = useContext(AuthContext);
@@ -16,7 +15,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
     const name = form.name.value;
     const email = form.email.value;
     const phone = form.phone.value;
-    // [3, 4, 5].map((value, i) => console.log(value))
+
     const booking = {
       appointmentDate: date,
       treatment: treatmentName,
@@ -26,9 +25,6 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
       phone,
     };
 
-    // TODO: send data to the server
-    // and once data is saved then close the modal
-    // and display success toast
     fetch("https://doctor-portal-delta.vercel.app/bookings", {
       method: "POST",
       headers: {
@@ -38,7 +34,6 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.acknowledged) {
           setTreatment(null);
           toast.success("Booking confirmed");

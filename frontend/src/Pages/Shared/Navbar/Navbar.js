@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   const menuItems = (
-    <React.Fragment>
+    <>
       <li>
         <Link to="/">Home</Link>
       </li>
@@ -34,7 +34,7 @@ const Navbar = () => {
           <Link to="/login">Login</Link>
         </li>
       )}
-    </React.Fragment>
+    </>
   );
 
   return (
@@ -65,7 +65,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
-          Doctors Portal
+          BDentist
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

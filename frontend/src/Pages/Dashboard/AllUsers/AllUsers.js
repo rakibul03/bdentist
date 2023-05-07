@@ -30,7 +30,7 @@ const AllUsers = () => {
 
   return (
     <div>
-      <h2 className="text-3xl">All Users</h2>
+      {/* <h2 className="text-3xl">All Users</h2> */}
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
@@ -39,11 +39,11 @@ const AllUsers = () => {
               <th>Name</th>
               <th>Email</th>
               <th>Admin</th>
-              <th>Delete</th>
+              {/* <th>Delete</th> */}
             </tr>
           </thead>
           <tbody>
-            {users.map((user, i) => (
+            {users?.map((user, i) => (
               <tr key={user._id}>
                 <th>{i + 1}</th>
                 <td>{user.name}</td>
@@ -59,7 +59,7 @@ const AllUsers = () => {
                   )}
                 </td>
                 <td>
-                  <button className="btn btn-xs btn-danger">Delete</button>
+                  {/* <button className="btn btn-xs btn-danger">Delete</button> */}
                 </td>
               </tr>
             ))}
