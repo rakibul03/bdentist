@@ -161,6 +161,13 @@ async function run() {
       res.send(bookings);
     });
 
+    // Get all booking
+    app.get("/all-bookings", async (req, res) => {
+      const query = {};
+      const bookings = await bookingsCollection.find(query).toArray();
+      res.send(bookings);
+    });
+
     app.post("/bookings", async (req, res) => {
       const booking = req.body;
 
