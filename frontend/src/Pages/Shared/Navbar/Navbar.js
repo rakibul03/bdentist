@@ -18,13 +18,8 @@ const Navbar = () => {
       <li>
         <Link to="/">Home</Link>
       </li>
-      <li>
-        <Link to="/contact">Contact</Link>
-      </li>
-      <li>
-        <Link to="/about">About</Link>
-      </li>
-      {user?.uid ? (
+
+      {user?.uid && (
         <>
           <li>
             <Link to="/appointment">Appointment</Link>
@@ -32,10 +27,18 @@ const Navbar = () => {
           <li>
             <Link to="/dashboard">Dashboard</Link>
           </li>
-          <li>
-            <button onClick={handleLogOut}>Sign out</button>
-          </li>
         </>
+      )}
+      <li>
+        <Link to="/contact">Contact</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      {user?.uid ? (
+        <li>
+          <button onClick={handleLogOut}>Sign out</button>
+        </li>
       ) : (
         <li>
           <Link to="/login">Login</Link>
