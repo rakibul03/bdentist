@@ -16,7 +16,9 @@ const Banner = () => {
             schedule appointments online, patients can easily find available
             times and book appointments at their convenience.
           </p>
-          <PrimaryButton>Getting Started</PrimaryButton>
+          <a href="#contact">
+            <PrimaryButton>Contact Us</PrimaryButton>
+          </a>
         </div>
       </div>
     </div>

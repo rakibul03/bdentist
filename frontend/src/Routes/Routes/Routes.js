@@ -14,6 +14,7 @@ import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AppointmentsList from "../../Pages/Dashboard/AppointmentsList/AppointmentsList";
 import About from "../../Pages/Shared/About/About";
+import Contact from "../../Pages/Home/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
             <Appointment />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
       {
         path: "/about",
