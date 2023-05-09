@@ -13,18 +13,15 @@ const Footer = () => {
     >
       <div className="footer pl-96">
         <div>
-          <span className="footer-title">Company</span>
+          <span className="footer-title">BDentist</span>
           <Link to="/" className="link link-hover">
+            Home
+          </Link>
+          <Link to="/about" className="link link-hover">
             About us
           </Link>
           <Link to="/" className="link link-hover">
             Contact
-          </Link>
-          <Link to="/" className="link link-hover">
-            Jobs
-          </Link>
-          <Link to="/" className="link link-hover">
-            Press kit
           </Link>
         </div>
         <div>
@@ -41,7 +38,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center mt-32">
+      <div className="text-center mt-32 text-lg font-semibold">
         <p>Copyright © 2023 - All right reserved by BDentist</p>
       </div>
     </footer>

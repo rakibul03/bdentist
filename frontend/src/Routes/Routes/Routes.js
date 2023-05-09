@@ -13,6 +13,7 @@ import SignUp from "../../Pages/SignUp/SignUp";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AppointmentsList from "../../Pages/Dashboard/AppointmentsList/AppointmentsList";
+import About from "../../Pages/Shared/About/About";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
             <Appointment />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },
